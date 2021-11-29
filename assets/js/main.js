@@ -17,7 +17,7 @@ $(function () {
 		let parent = "nav ul:first-child";
 		console.log($(this).text().toLowerCase());
 		for (let i = 1; "h" + i !== this.nodeName.toLowerCase(); ++i) {
-			parent += " tag-h" + i + ":last-child ul";
+			parent += " .tag-h" + i + ":last-child ul";
 		}
 		console.log(parent);
 		$(parent).append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '') + "'>" + $(this).text() + "</a><ul></ul></li>");
