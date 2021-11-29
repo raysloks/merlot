@@ -306,14 +306,6 @@ footer span.octocat {
   height: 60px;
   margin: 20px auto 0;}
 
-/* nav */
-
-nav {
-    position: fixed;
-    width: 230px;
-    margin-left: -200px;
-}
-
 /* content */
 
 body {
