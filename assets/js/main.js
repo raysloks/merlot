@@ -15,9 +15,10 @@ $(window).resize(sectionHeight);
 $(function () {
 	$("section h1, section h2, section h3").each(function () {
 		let parent = "nav ul";
-		for (let i = 1; "h" + i !== this.nodeName.toLowerCase(); ++i) {
+		console.log(this.nodeName.toLowerCase());
+		/*for (let i = 1; "h" + i !== this.nodeName.toLowerCase(); ++i) {
 			parent += " tag-h" + i + ":last-child ul";
-        }
+        }*/
 		$(parent).append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '') + "'>" + $(this).text() + "</a><ul></ul></li>");
 		$(this).attr("id", $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, ''));
 		$("nav ul li:first-child a").parent().addClass("active");
