@@ -27,7 +27,7 @@ $(function () {
 
 	$("nav ul li").on("click", "a", function (event) {
 		var position = $($(this).attr("href")).offset().top - 190;
-		$("html, body").animate({ scrollTop: position }, 400);
+		$("html, body").stop().animate({ scrollTop: position }, 400);
 		event.preventDefault();
 	});
 
