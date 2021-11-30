@@ -13,7 +13,7 @@ var sectionHeight = function () {
 //$(window).resize(sectionHeight);
 
 $(function () {
-	$("section h1, section h2, section h3").each(function () {
+	$("section h1, section h2, section h3, section h4").each(function () {
 		let parent = "nav";
 		console.log($(this).text().toLowerCase());
 		for (let i = 1; "h" + i !== this.nodeName.toLowerCase(); ++i) {
