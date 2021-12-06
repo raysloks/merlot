@@ -70,11 +70,16 @@
 					{% if site.github.is_user_page %}
 					<p>Projects by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> can be found on <a href="{{ site.github.repository_url }}">GitHub</a></p>
 					{% endif %}
+					{% unless site.github %}
+					<p>THIS IS A DEVELOPMENT BUILD</p>
+					{% endunless %}
 				</span>
 				<span class="left-tail"></span>
 				<span class="right-tail"></span>
 			</span>
+			{% if site.github %}
 			<p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+			{% endif %}
 			<span class="octocat"></span>
 		</footer>
 
