@@ -106,6 +106,7 @@ div.shell {
 	display: block;
 	width: 670px;
 	margin: 0 auto;
+	background: #ece4d8;
 }
 
 a#forkme_banner {
@@ -516,10 +517,6 @@ dd p:first-child {
 }
 
 /* Content based headers */
-
-#main_content {
-	background: #ece4d8;
-}
 
 #main_content > .header-level-1:first-child,
 #main_content > .header-level-2:first-child,
