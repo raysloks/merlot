@@ -106,7 +106,6 @@ div.shell {
 	display: block;
 	width: 670px;
 	margin: 0 auto;
-	background: #ece4d8;
 }
 
 a#forkme_banner {
@@ -260,8 +259,10 @@ span.banner-fix {
 
 section#main_content {
 	z-index: 2;
-	padding: 20px 82px 0;
+	padding: 20px 22px 0;
+	margin: 0 60px;
 	min-height: 185px;
+	background: #ece4d8;
 }
 
 /* footer */
