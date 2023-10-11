@@ -148,7 +148,7 @@ header span.left-tail, header span.right-tail {
 	display: block;
 	width: 56px;
 	height: 105px;
-	background: transparent url(../images/ribbon-tail-sprite.png) 0 0 no-repeat;
+	background: transparent url(../images/ribbon-tail-sprite.svg) 0 0 no-repeat;
 	position: absolute;
 	bottom: -37px;
 	z-index: 0;
@@ -268,7 +268,7 @@ section#main_content {
 /* footer */
 
 footer {
-	background: transparent url(../images/footer-ramp.jpg) center -1px no-repeat;
+	background: transparent url(../images/footer-ramp.jpg) center -1px no-repeat #ece4d8;
 	padding-top: 104px;
 	padding-bottom: 40px;
 	margin: -94px auto;
@@ -330,7 +330,7 @@ footer span.left-tail, footer span.right-tail {
 	display: block;
 	width: 18px;
 	height: 29px;
-	background: transparent url(../images/small-ribbon-tail-sprite.png) 0 0 no-repeat;
+	background: transparent url(../images/small-ribbon-tail-sprite.svg) 0 0 no-repeat;
 	position: absolute;
 	bottom: 5px;
 	z-index: 0;
