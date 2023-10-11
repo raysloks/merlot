@@ -269,7 +269,8 @@ section#main_content {
 footer {
 	background: transparent url(../images/footer-ramp.jpg) center -1px no-repeat;
 	padding-top: 104px;
-	margin: -94px auto 40px;
+	padding-bottom: 40px;
+	margin: -94px auto;
 	max-width: 560px;
 	text-align: center;
 }
@@ -359,13 +360,14 @@ nav {
 	width: 240px;
 	margin-left: -240px;
 	margin-top: -120px;
+	background: #ece4d8;
 }
 
 /* content */
 
 body {
 	//background: #ece4d8;
-	background: url(../images/moon.png) right / contain no-repeat fixed #83afc3;
+	background: url(../images/moon.png) right / 60% no-repeat fixed #83afc3;
 	font: normal normal 15px/1.5 Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
 	color: #544943;
 	-webkit-font-smoothing: antialiased;
