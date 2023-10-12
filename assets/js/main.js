@@ -1,19 +1,19 @@
-var sectionHeight = function () {
+var mainHeight = function () {
 	var total = $(window).height(),
-		$section = $('section').css('height', 'auto');
+		$main = $('main').css('height', 'auto');
 
-	if ($section.outerHeight(true) < total) {
-		var margin = $section.outerHeight(true) - $section.height();
-		$section.height(total - margin - 20);
+	if ($main.outerHeight(true) < total) {
+		var margin = $main.outerHeight(true) - $main.height();
+		$main.height(total - margin - 20);
 	} else {
-		$section.css('height', 'auto');
+		$main.css('height', 'auto');
 	}
 }
 
-//$(window).resize(sectionHeight);
+//$(window).resize(mainHeight);
 
 $(function () {
-	$("section h1, section h2, section h3, section h4").each(function () {
+	$("main h1, main h2, main h3, main h4").each(function () {
 		let parent = "nav";
 		console.log($(this).text().toLowerCase());
 		for (let i = 1; "h" + i !== this.nodeName.toLowerCase(); ++i) {
@@ -31,7 +31,7 @@ $(function () {
 		event.preventDefault();
 	});
 
-	//sectionHeight();
+	//mainHeight();
 
-	//$('img').on('load', sectionHeight);
+	//$('img').on('load', mainHeight);
 });
