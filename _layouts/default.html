@@ -14,7 +14,7 @@
 	<script src="{{ '/assets/js/headsmart.min.js' | relative_url }}"></script>
 	<script>
 		$(document).ready(function () {
-			$('#main_content').headsmart()
+			$('#content').headsmart()
 		})
 	</script>
 	<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
@@ -26,64 +26,65 @@
 
 <body>
 	<div class="shell">
-
-		<header>
-			<span class="ribbon-outer">
-				<span class="ribbon-inner">
-					<h1>{{ page.title | default: site.github.repository_name }}</h1>
-					<h2>{{ page.description | default: site.github.project_tagline }}</h2>
+		<div class="main_column">
+			<header>
+				<span class="ribbon-outer">
+					<span class="ribbon-inner">
+						<h1>{{ page.title | default: site.github.repository_name }}</h1>
+						<h2>{{ page.description | default: site.github.project_tagline }}</h2>
+					</span>
+					<span class="left-tail"></span>
+					<span class="right-tail"></span>
 				</span>
-				<span class="left-tail"></span>
-				<span class="right-tail"></span>
-			</span>
-		</header>
-
-		{% if site.show_downloads %}
-		<section id="downloads">
-			<span class="inner">
-				<a href="{{ site.github.zip_url }}" class="zip"><em>download</em> .ZIP</a><a href="{{ site.github.tar_url }}" class="tgz"><em>download</em> .TGZ</a>
-			</span>
-		</section>
-		{% else %}
-		<div id="no-downloads">
-			<span class="inner">
-			</span>
+			</header>
+	
+			{% if site.show_downloads %}
+			<section id="downloads">
+				<span class="inner">
+					<a href="{{ site.github.zip_url }}" class="zip"><em>download</em> .ZIP</a><a href="{{ site.github.tar_url }}" class="tgz"><em>download</em> .TGZ</a>
+				</span>
+			</section>
+			{% else %}
+			<div id="no-downloads">
+				<span class="inner">
+				</span>
+			</div>
+			{% endif %}
+	
+			<span class="banner-fix"></span>
+	
+			<main id="content">
+				{{ content }}
+			</main>
+	
+			<footer>
+				<span class="ribbon-outer">
+					<span class="ribbon-inner">
+						{% if site.github.is_project_page %}
+						<p>this project by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> can be found on <a href="{{ site.github.repository_url }}">GitHub</a></p>
+						{% endif %}
+						{% if site.github.is_user_page %}
+						<p>Projects by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> can be found on <a href="{{ site.github.repository_url }}">GitHub</a></p>
+						{% endif %}
+						{% unless site.github %}
+						<p>THIS IS A <a>DEVELOPMENT BUILD</a></p>
+						{% endunless %}
+					</span>
+					<span class="left-tail"></span>
+					<span class="right-tail"></span>
+				</span>
+				{% if site.github %}
+				<p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+				{% else %}
+				<p>Generated using Merlot</p>
+				{% endif %}
+				<span class="octocat"></span>
+			</footer>
 		</div>
-		{% endif %}
-
-		<span class="banner-fix"></span>
 
 		<nav>
 			<ul></ul>
 		</nav>
-
-		<section id="main_content">
-			{{ content }}
-		</section>
-
-		<footer>
-			<span class="ribbon-outer">
-				<span class="ribbon-inner">
-					{% if site.github.is_project_page %}
-					<p>this project by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> can be found on <a href="{{ site.github.repository_url }}">GitHub</a></p>
-					{% endif %}
-					{% if site.github.is_user_page %}
-					<p>Projects by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> can be found on <a href="{{ site.github.repository_url }}">GitHub</a></p>
-					{% endif %}
-					{% unless site.github %}
-					<p>THIS IS A <a>DEVELOPMENT BUILD</a></p>
-					{% endunless %}
-				</span>
-				<span class="left-tail"></span>
-				<span class="right-tail"></span>
-			</span>
-			{% if site.github %}
-			<p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-			{% else %}
-			<p>Generated using Merlot</p>
-			{% endif %}
-			<span class="octocat"></span>
-		</footer>
 
 	</div>
 </body>

@@ -104,8 +104,16 @@ header, footer, section {
 
 div.shell {
 	display: block;
-	width: 670px;
-	margin: 0 auto;
+	width: 550px;
+    margin: 0 auto;
+    background: #ece4d8;
+    border: 2px #d3ccc1;
+    border-style: none solid;
+    box-sizing: border-box;
+}
+
+div.main_column {
+	margin: 0 -2px;
 }
 
 a#forkme_banner {
@@ -257,12 +265,10 @@ span.banner-fix {
 	top: 19px;
 }
 
-section#main_content {
+main#content {
 	z-index: 2;
 	padding: 20px 22px 0;
-	margin: 0 60px;
 	min-height: 185px;
-	background: #ece4d8;
 }
 
 /* footer */
@@ -360,9 +366,11 @@ footer span.octocat {
 nav {
 	position: fixed;
 	width: 240px;
-	margin-left: -240px;
-	margin-top: -120px;
+	height: 100%;
+	margin-left: -180px;
+	padding-top: 120px;
 	background: #ece4d8;
+    border-left: 2px solid #d3ccc1;
 }
 
 /* content */
@@ -522,12 +530,12 @@ dd p:first-child {
 
 /* Content based headers */
 
-#main_content > .header-level-1:first-child,
-#main_content > .header-level-2:first-child,
-#main_content > .header-level-3:first-child,
-#main_content > .header-level-4:first-child,
-#main_content > .header-level-5:first-child,
-#main_content > .header-level-6:first-child {
+#content > .header-level-1:first-child,
+#content > .header-level-2:first-child,
+#content > .header-level-3:first-child,
+#content > .header-level-4:first-child,
+#content > .header-level-5:first-child,
+#content > .header-level-6:first-child {
 	margin-top: 0;
 }
 
