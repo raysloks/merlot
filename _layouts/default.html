@@ -34,17 +34,6 @@
 	<div class="shell">
 
 		<div class="main_column">
-
-			<header>
-				<span class="ribbon-outer">
-					<span class="ribbon-inner">
-						<h1>{{ page.title | default: site.github.repository_name }}</h1>
-						<h2>{{ page.description | default: site.github.project_tagline }}</h2>
-					</span>
-					<span class="left-tail"></span>
-					<span class="right-tail"></span>
-				</span>
-			</header>
 	
 			{% if site.show_downloads %}
 			<section id="downloads">
@@ -55,6 +44,16 @@
 			{% else %}
 			<div id="no-downloads">
 				<span class="inner">
+					<header>
+						<span class="ribbon-outer">
+							<span class="ribbon-inner">
+								<h1>{{ page.title | default: site.github.repository_name }}</h1>
+								<h2>{{ page.description | default: site.github.project_tagline }}</h2>
+							</span>
+							<span class="left-tail"></span>
+							<span class="right-tail"></span>
+						</span>
+					</header>
 				</span>
 			</div>
 			{% endif %}
