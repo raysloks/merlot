@@ -268,18 +268,19 @@ section#main_content {
 /* footer */
 
 footer {
-	background: transparent url(../images/footer-ramp.jpg) center -1px no-repeat #ece4d8;
+	background: #ece4d8 url(../images/footer-ramp.jpg) center -1px no-repeat;
 	padding-top: 104px;
 	padding-bottom: 40px;
 	margin: -94px auto;
-	max-width: 560px;
+	max-width: 550px;
 	text-align: center;
 }
 
 footer span.ribbon-outer {
 	display: block;
 	position: relative;
-	border-bottom: 2px solid #bdb6ad;
+	padding: 0 -5px;
+	//border-bottom: 2px solid #bdb6ad;
 }
 
 footer span.ribbon-inner {
